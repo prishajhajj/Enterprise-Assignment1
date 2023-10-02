@@ -18,5 +18,7 @@ namespace PartyInvites.Models
 
         [Required(ErrorMessage = "Please specify whether you'll attend")]
         public bool? WillAttend { get; set; }
+
+        enum TechnicalInterest { IOT, Cognitive, Wearable, AR_VR };
     }
 }
