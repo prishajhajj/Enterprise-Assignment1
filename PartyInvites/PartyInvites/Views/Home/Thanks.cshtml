@@ -12,16 +12,22 @@
     <title>Thanks</title>
 </head>
 <body>
+
     <div>
-        <h1>Thank you, @Model.Name!</h1>
+        
+        
         @if (Model.WillAttend == true)
         {
-            @:It's great that you're coming. The drinks are already in the fridge!
+            <h1>Thank you, @Model.Name for Accepting the Invitation!</h1>
+            <h1>It's great that you're coming!</h1> 
+            @:You are enrolled in the @Model.TechnicalInterest track of the competition.
         }
         else
         {
             @:Sorry to hear that you can't make it, but thanks for letting us know.
-        }
+        }       
     </div>
+
+
 </body>
 </html>
