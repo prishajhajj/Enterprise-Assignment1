@@ -1,6 +1,7 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@using PartyInvites.Enums
 @model PartyInvites.Models.GuestResponse
 
 @{
@@ -32,19 +33,13 @@
         }, "Choose an option")
         </p>
 
-        <p>
-            Technical Interest
-            @Html.DropDownListFor(t => t.TechnicalInterest, new[] {
-        new SelectListItem() {Text = "Internet of Things",
-        Value = bool.TrueString},
-        new SelectListItem() {Text = "Cognitive Computing",
-        Value = bool.FalseString},
-        new SelectListItem() {Text = "Wearable Computing",
-        Value = bool.FalseString},
-        new SelectListItem() {Text = "Augumented / Virtual Reality",
-        Value = bool.FalseString}
-        }, "Choose a technical interest")
-        </p>
+        <div class="form-group">
+            <label asp-for="TechnicalInterest" class="control-label"></label>
+            <select asp-for="TechnicalInterest" asp-items="Html.GetEnumSelectList<TechnicalInterest>( )" onselect="">
+            <option value="">Please Choose Interest</option>
+            </select>
+            <span asp-validation-for="TechnicalInterest" class="text-danger"></span>
+        </div>
         
 
         <input type="submit" value="Accept Invitation" />

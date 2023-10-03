@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using PartyInvites.Enums;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 namespace PartyInvites.Models
@@ -20,6 +21,8 @@ namespace PartyInvites.Models
 
         [Required(ErrorMessage = "Please specify whether you'll attend")]
         public bool? WillAttend { get; set; }
+
+        public TechnicalInterest TechnicalInterest { get; set; }
 
     }
 }
