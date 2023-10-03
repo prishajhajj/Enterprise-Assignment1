@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 namespace PartyInvites.Models
 {
 
@@ -18,8 +20,6 @@ namespace PartyInvites.Models
 
         [Required(ErrorMessage = "Please specify whether you'll attend")]
         public bool? WillAttend { get; set; }
-
-        public enum TechnicalInterest { IOT, Cognitive, Wearable, AR_VR };
 
     }
 }

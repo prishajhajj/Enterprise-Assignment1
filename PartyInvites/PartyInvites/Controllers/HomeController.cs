@@ -31,7 +31,7 @@ namespace PartyInvites.Controllers
                 return View();
             }
             
-
         }
+        
     }
 }

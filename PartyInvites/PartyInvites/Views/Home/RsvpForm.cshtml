@@ -31,13 +31,24 @@
         Value = bool.FalseString}
         }, "Choose an option")
         </p>
+
         <p>
             Technical Interest
-            @Html.DropDownListFor(l => l.TechnicalInterest)
+            @Html.DropDownListFor(t => t.TechnicalInterest, new[] {
+        new SelectListItem() {Text = "Internet of Things",
+        Value = bool.TrueString},
+        new SelectListItem() {Text = "Cognitive Computing",
+        Value = bool.FalseString},
+        new SelectListItem() {Text = "Wearable Computing",
+        Value = bool.FalseString},
+        new SelectListItem() {Text = "Augumented / Virtual Reality",
+        Value = bool.FalseString}
+        }, "Choose a technical interest")
         </p>
+        
 
-
-        <input type="submit" value="Submit RSVP" />
+        <input type="submit" value="Accept Invitation" />
+        <input type="submit" value="Send Regrets" />
     }
 </body>
 </html>
