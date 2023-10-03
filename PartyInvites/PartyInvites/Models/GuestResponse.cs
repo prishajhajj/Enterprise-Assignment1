@@ -22,6 +22,7 @@ namespace PartyInvites.Models
         [Required(ErrorMessage = "Please specify whether you'll attend")]
         public bool? WillAttend { get; set; }
 
+        [Required(ErrorMessage = "Please specify your technical interest")]
         public TechnicalInterest TechnicalInterest { get; set; }
 
     }
