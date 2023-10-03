@@ -2,6 +2,10 @@
 using PartyInvites.Models;
 using System.Diagnostics;
 
+//The HomeController.cs controller contains RsvpForm ViewResults, which represents the
+// functionality of Accept Invitation and Send Regrets buttons which are located 
+// in the RsvpForm.cshtml file.
+
 namespace PartyInvites.Controllers
 {
     public class HomeController : Controller
@@ -32,6 +36,6 @@ namespace PartyInvites.Controllers
             }
             
         }
-        
-    }
+
+        }
 }
